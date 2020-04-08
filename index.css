@@ -1,0 +1,11 @@
+html,body,div{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.sample {
+	color:red;
+	font-size:5rem;
+	background:url('./img/images(1).jpg') no-repeat center;
+	height:100vh
+}

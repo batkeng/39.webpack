@@ -1,0 +1,17 @@
+/*!
+ * 
+ * 			Created by batkeng
+ * 			Build Datetime: 2020-04-08 12:18:01
+ * 			
+ */
+html,body,div{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.sample {
+	color:red;
+	font-size:5rem;
+	background:url("./dist/images(1).jpg?5f58b54cd4ce58d8e1020d3b769b15d0") no-repeat center;
+	height:100vh
+}
