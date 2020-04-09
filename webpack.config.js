@@ -14,9 +14,8 @@ module.exports = {
 		rules:[
 			{
 				test: /\.js$/, 
-				use:[
-					path.resolve("./sample-loader.js"),
-				]
+				exclude: /node_modules/, //node - modules는 바벨을 거치지 않게
+				loader:'babel-loader', //바벨로더
 			},
 			{
 				test: /\.css$/, 
@@ -51,7 +50,7 @@ module.exports = {
 					{
 						loader:'url-loader',
 						options: {
-							publicPath:'./dist', //dist 폴더에 저장하겟다
+							publicPath:'./', 
 							name: '[name].[ext]?[hash]',
 							limit:2048 //2kb 이하만 처리
 					}
@@ -87,5 +86,9 @@ module.exports = {
 	output:{
 		filename:'[name].js',
 		path:path.resolve("./dist"), //현재 dist 폴더를 절대경로로 
+	},
+	devServer:{
+		contentBase: path.resolve("./dist"),
+		port:8000,
 	}
 }
